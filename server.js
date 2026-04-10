@@ -3,7 +3,7 @@ const https = require('https');
 
 const PORT = process.env.PORT || 8080;
 const GEMINI_KEY = process.env.GEMINI_API_KEY || '';
-const MODELS = ['gemini-2.0-flash','gemini-2.5-flash','gemini-2.5-pro'];
+const MODELS = ['gemini-2.5-flash','gemini-2.5-pro'];
         const server = http.createServer(async (req, res) => {
           res.setHeader('Access-Control-Allow-Origin', '*');
             res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
