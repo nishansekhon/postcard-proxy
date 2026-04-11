@@ -20,7 +20,7 @@ const MODELS = ['gemini-2.5-flash','gemini-2.5-pro'];
                                                     if (!prompt) throw new Error('No prompt provided');
                                                             const requestBody = JSON.stringify({
                                                                       contents: [{ parts: [{ text: `Create a detailed Midjourney-style AI image prompt based on: "${prompt}". Return ONLY valid JSON no markdown: {"prompt":"full prompt with --ar --v --stylize","model":"Midjourney","style":"2-4 words","mood":"2-3 words","subject":"3-5 words","lighting":"2-4 words","tags":["tag1","tag2","tag3","tag4","tag5"]}` }] }],
-                                                                                generationConfig: { temperature: 0.7, maxOutputTokens: 400 }
+                                                                                generationConfig: { temperature: 0.7, maxOutputTokens: 2048 }
                                                                                         });
                                                                                                 let result = null, lastError = '';
                                                                                                         for (const model of MODELS) {
